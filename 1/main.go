@@ -45,7 +45,7 @@ func sol1(l1, l2 []int) int {
 	dist := 0
 
 	for i := range l1 {
-		dist += int(math.Max(float64(l1[i]), float64(l2[i])) - math.Min(float64(l1[i]), float64(l2[i])))
+		dist += int(math.Abs(float64(l2[i] - l1[i])))
 	}
 
 	return dist
